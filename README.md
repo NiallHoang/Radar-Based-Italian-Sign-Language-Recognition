@@ -10,8 +10,6 @@ The model classifies **126 isolated LIS gestures** from 3-antenna radar RTM sign
 
 - [Task Overview](#task-overview)
 - [Model Architecture](#model-architecture)
-- [Project Structure](#project-structure)
-- [Configuration](#configuration)
 - [Results](#results)
 ---
 
@@ -46,7 +44,7 @@ TemporalAttentionPool  ──  attention-weighted pooling over time → (B, 384)
 Linear Classifier  ──  384 → 126
 ```
 
----
+<!-- ---
 
 ## Project Structure
 
@@ -61,9 +59,9 @@ Linear Classifier  ──  384 → 126
 ├── requirements.txt # Python dependencies
 ├── checkpoints/     # Saved model weights (.pth)
 └── results/         # Training logs, plots, submission.csv
-```
+``` -->
 
----
+<!-- ---
 
 ## Configuration
 
@@ -83,11 +81,9 @@ Key parameters in `config.py`:
 | `SWA_LR` | 5e-5 | Constant LR during SWA phase |
 | `MIXUP_PHASE1_END` | 35 | Epoch where Phase 1 augmentation ends |
 | `VALID_SPLIT` | 0.2 | Fraction of train data used for validation |
-| `num_workers` | 4 | DataLoader worker processes |
+| `num_workers` | 4 | DataLoader worker processes | -->
 
----
 
 ## Results
-![Training/Val Loss and Accuracy](results/training_history_14.png)
 - Validation accuracy applying SWA: increase from **0.8888** to **0.8925**
 - Combined val+test leaderboard score after inference: **0.8817**
